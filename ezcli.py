@@ -8,14 +8,13 @@ projectName = ""
 path = ""
 
 # PLEASE CHANGE THIS PATH IF NEEDED
-ezcliPath = "/home/miguel/dev/ezcli/"
+ezcliPath = "/home/miguel/dev/ezCLI/"
 
 
 def createProject():
     # See this pretty boy right here (global)? It will tell our beatiful code
     # that the variable projectName is refering to the global variable
-    global projectName
-    global path
+    global projectName, path
     option = "no"
 
     path = input(
@@ -42,9 +41,9 @@ def createProject():
                       "Windows" else "clear")
 
 
-# Flutter projects are really annoying when it comes to names
-# you can only right a lowercase name and without spaces
-# so, time to make some changes
+projectName
+
+
 def correctProjectName():
     global projectName
 
@@ -90,13 +89,13 @@ def copyFile(fileName):
         with open(ezcliPath + fileName + ".dart", "r") as f:
             lines = f.readlines()
             lines = [l for l in lines]
-            with open(project + "/lib/" + fileName + ".dart", "w") as f1:
+            with open(project + "lib/" + fileName + ".dart", "w") as f1:
                 f1.writelines(lines)
     else:
         with open(ezcliPath + fileName + ".dart", "r") as f:
             lines = f.readlines()
             lines = [l for l in lines]
-            with open(project + "/lib/screens/" + fileName + ".dart", "w") as f1:
+            with open(project + "lib/screens/" + fileName + ".dart", "w") as f1:
                 f1.writelines(lines)
 
 
