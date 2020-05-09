@@ -7,7 +7,7 @@ import platform
 projectName = ""
 path = ""
 
-ezcliPath = os.getcwd()
+ezcliPath = os.getcwd() + "/"
 
 
 def createProject():
